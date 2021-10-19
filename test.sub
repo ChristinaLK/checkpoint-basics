@@ -1,0 +1,17 @@
+Executable = test.sh
+transfer_checkpoint_files = checkpoint.txt
+checkpoint_exit_code = 85
+
+transfer_output_files = output.txt
+when_to_transfer_output = ON_EXIT
+
+Error = logs/job.$(Cluster).$(Process).error
+Output = logs/job.$(Cluster).$(Process).output
+Log = logs/job.$(Cluster).log
+
+#Requirements = (OSGVO_OS_STRING == "RHEL 7") && (OpSys == "LINUX")
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+
+queue 1
